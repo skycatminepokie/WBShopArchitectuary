@@ -1,0 +1,27 @@
+{
+  "schemaVersion": 1,
+  "id": "wbshop",
+  "version": "${version}",
+  "name": "Worldborder Shop",
+  "description": "Buy upgrades for the worldborder!",
+  "authors": [
+    "skycatminepokie"
+  ],
+  "contact": {},
+  "license": "All-Rights-Reserved",
+  "icon": "icon.png",
+  "environment": "*",
+  "entrypoints": {
+    "main": [
+      "skycat.wbshop.fabric.WorldborderShopFabric"
+    ]
+  },
+  "mixins": [
+    "wbshop.mixins.json",
+    "wbshop-common.mixins.json"
+  ],
+  "depends": {
+    "fabricloader": ">=0.14.9",
+    "minecraft": ">=1.19"
+  }
+}
