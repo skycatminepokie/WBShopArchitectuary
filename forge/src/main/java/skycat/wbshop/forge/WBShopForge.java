@@ -1,8 +1,6 @@
 package skycat.wbshop.forge;
 
-import dev.architectury.platform.Platform;
 import dev.architectury.platform.forge.EventBuses;
-import dev.architectury.utils.Env;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import skycat.wbshop.WBShop;

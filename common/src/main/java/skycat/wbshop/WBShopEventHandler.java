@@ -7,14 +7,16 @@ import dev.architectury.platform.Platform;
 import dev.architectury.utils.Env;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.damage.DamageSource;
+import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.server.MinecraftServer;
 import net.minecraft.server.world.ServerWorld;
+import skycat.wbshop.server.EconomyManager;
 
 public class WBShopEventHandler {
 
 
     public static void onServerStarting(MinecraftServer server) {
-
+        WBShop.SERVER_INSTANCE = server;
     }
 
     public static void onServerStopping(MinecraftServer server) {
@@ -26,11 +28,8 @@ public class WBShopEventHandler {
     }
 
     public static EventResult onEntityDeath(LivingEntity livingEntity, DamageSource damageSource) {
-        if (Platform.getEnvironment().equals(Env.SERVER)) {
-
-        }
         if (livingEntity.isPlayer()) {
-            // TODO: On death code
+            EconomyManager.getInstance().onPlayerDeath((PlayerEntity) livingEntity); // TODO This cast should work, but maybe a fallback should be added
         }
         return EventResult.pass();
     }
