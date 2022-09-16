@@ -13,7 +13,7 @@
   "environment": "*",
   "entrypoints": {
     "main": [
-      "skycat.wbshop.fabric.WorldborderShopFabric"
+      "skycat.wbshop.fabric.WBShopFabric"
     ]
   },
   "mixins": [
